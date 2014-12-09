@@ -267,7 +267,7 @@ a img.aligncenter {
     height: 100px;
     background: #f8f8f8;
     margin-top: 30px;
-    margin-bottom: -108px;
+    margin-bottom: -110px;
 }
 
 /* Tabs */
@@ -329,6 +329,7 @@ a img.aligncenter {
     padding-right: 1.7em;
     padding-left: 1.7em;
     margin-right: 0;
+    outline: 0;
 }
 .nav-tabs {
     border-bottom: 5px solid #9f77b3;
@@ -904,7 +905,7 @@ select:focus:invalid {
         padding: 4% 10.5%;
     }
     .grey-block {
-        margin-bottom: -108px;
+        margin-bottom: -109px;
     }
     .nav-tabs > li > a {
         font-size: 1.5em;
