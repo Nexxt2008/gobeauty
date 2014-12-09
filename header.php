@@ -105,7 +105,7 @@
                                     <div class="author-date">                                        
                                         by <span class="author-name"><?php the_author(); ?></span> <?php echo get_the_date('F j, Y'); ?> 
                                     </div>
-                                    <div class="post-title">
+                                    <div class="post-title<?php if (strlen(get_the_title()) > 60) echo ' long-title'; ?>">
                                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     </div>
                                 </div>

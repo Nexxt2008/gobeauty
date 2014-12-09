@@ -833,6 +833,9 @@ select:focus:invalid {
         font-size: 1.5em;
         line-height: 1.3em;
     }
+    .post-title.long-title h3 a {
+        font-size: 1.1em !important;
+    }
     li.post .post-title h3 a {
         font-size: 1.2em;
     }
