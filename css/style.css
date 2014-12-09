@@ -182,6 +182,41 @@ a img.aligncenter {
     clear: both;
 }
 
+#qa.tab-pane h2{
+    font-size: 1.8em;
+    font-family: 'opensans';
+    margin: 0.8em 0;
+    color: #333;
+}
+
+#qa.tab-pane {
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: #666;
+}
+#qa.tab-pane p{
+    margin-bottom: 1em;
+}
+#qa.tab-pane a, .single.content.content a {
+    color: #9966cc;
+}
+
+.wpcf7 {
+    text-align: center;
+    margin: 30px 0 40px;
+}
+.wpcf7 input, .wpcf7 textarea{
+    min-width: 266px;
+    min-height: 30px;
+}
+.wpcf7 textarea{
+    height: 100px;
+}
+.wpcf7 input[type="submit"]{
+    padding: 0;
+    min-width: 280px;
+    font-size: 0.9em;
+}
 
 /* Header
 -----------------------------------------------------------------------------*/
@@ -189,7 +224,6 @@ a img.aligncenter {
     height: 60px;
     position: relative;
     padding-top: 30px;
-
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -223,6 +257,82 @@ a img.aligncenter {
 }
 #top-image img{
     top: 0 !important;
+}
+
+.ticker {
+    min-height: 20px;
+}
+
+.grey-block {
+    height: 100px;
+    background: #f8f8f8;
+    margin-top: 30px;
+    margin-bottom: -108px;
+}
+
+/* Tabs */
+
+.nav-tabs li a{
+    font-size: 1.5em;
+    line-height: 1.3em;
+    background: #9f77b3;
+    color: #eff3f4;
+    border-bottom: none;
+}
+
+.nav-tabs li:first-child a{
+    background: #9f77b3;
+}
+
+.nav-tabs li:nth-child(2) a{
+    background: #ad86bd;
+}
+
+.nav-tabs li:nth-child(3) a{
+    background: #b494c4;
+}
+
+.nav-tabs li:nth-child(4) a{
+    background: #bfa5cc;
+}
+
+.nav-tabs li:nth-child(5) a{
+    background: #c2accd;
+}
+
+.nav-tabs li:nth-child(6) a{
+    background: #c8b0d3;
+}
+
+.nav-tabs li:nth-child(7) a{
+    background: #ceb9db;
+}
+
+.nav-tabs li:nth-child(8) a{
+    background: #d5c5dd;
+}
+
+.nav-tabs li.pull-right a{
+    background: #d5d0d7 !important;
+    color: #9f76b2 !important;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus{
+    color: #eff3f4;
+    border-color: transparent;
+}
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    border-color: transparent;
+}
+.nav-tabs > li > a,
+.nav-pills > li > a {
+    padding-right: 1.7em;
+    padding-left: 1.7em;
+    margin-right: 0;
+}
+.nav-tabs {
+    border-bottom: 5px solid #9f77b3;
+    margin: 20px auto;
 }
 
 /* Middle
@@ -348,11 +458,14 @@ div.post .post-title h3 a {
 }
 .subscribe-form .email, input[name="sbscrbr_email"]{
     font-size: 1.2em;
-    height: 34px;
+    height: 36px;
     width: 200px;
     padding: 0 1em;
 }
-.subscribe-button, input[name="sbscrbr_submit_email"]{
+#subscribing input[type="email"]{
+    width: 120px;
+}
+.subscribe-button, input[name="sbscrbr_submit_email"], input.wpcf7-submit{
     border: none;
     color: #fff;
     font-size: 1.2em;
@@ -436,7 +549,18 @@ li.post .post-social{
 }
 .mtphr-dnt-scroll a {
     font-size: 1.5em;
-    text-decoration: none;
+    text-decoration: underline;
+    color: #9f77b3;
+    font-family: 'opensans';
+}
+.mtphr-dnt-scroll a:before{
+    content: "\00a0 \00a0 ~";
+}
+.mtphr-dnt-scroll a:after{
+    content: "~\00a0 \00a0 ";
+}
+.mtphr-dnt-scroll a b{
+    font-weight: normal;
 }
 .light-grey{
     color: #bbb !important;
@@ -447,21 +571,33 @@ li.post .post-social{
 .black{
     color: #000 !important;
 }
+
+input:focus:invalid:focus, 
+textarea:focus:invalid:focus,
+select:focus:invalid:focus,
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+    border-color: #ccc;
+    box-shadow: none;
+    color: #555;
+}
+
 /* Single page
 -----------------------------------------------------------------------------*/
-.single p {
+.single.content p {
     margin-left: 20px;
     margin-right: 20px;
 }
-.single img {
+.single.content img {
     max-width: 100%;
     height: auto;
 }
-.single p img.margin-none {
+.single.content p img.margin-none {
     margin-left: -20px;
     max-width: calc(100% + 40px);
 }
-.single h2 {
+.single.content h2 {
     margin: 20px 0;
     font-size: 1.8em;
     text-transform: uppercase;
@@ -470,14 +606,13 @@ li.post .post-social{
     color: #333;
     font-family: 'opensans';
 }
-.single {
+.single.content {
     font-size: 1.3em;
     line-height: 1.2em;
     color: #666;
 }
-.single p {
+.single.content p {
     margin-bottom: 20px;
-
 }
 .navigation {
     border-top: 5px solid #f8f8f8;
@@ -487,7 +622,7 @@ li.post .post-social{
 .navigation a {
     text-decoration: none;
     font-size: 1.3em;
-    color: #333;
+    color: #333 !important;
     font-family: 'opensans';
 }
 .navigation span {
@@ -527,11 +662,12 @@ li.post .post-social{
     font-family: 'opensans';
 }
 .author-page a{
-    color: #333;
+    color: #333 !important;
     border-top: 1px solid #c3c3c3;
     display: block;
     margin: 10px 0;
     padding-top: 10px;
+    text-decoration: underline;
 }
 .author.without-top-image{
     margin-top: 0 !important;
@@ -553,8 +689,18 @@ li.post .post-social{
 }
 .article-desc .social a{
     text-decoration: none;
-    color: #666;
+    color: #666 !important;
     margin-left: 0.8em;
+}
+
+.category h1 {
+    font-size: 3em;
+    text-align: center;
+    font-family: 'opensans';
+    margin: 0.5em 0 1.3em;
+}
+.category .grey-block{
+    margin-top: 0;
 }
 
 /* Footer
@@ -614,12 +760,30 @@ li.post .post-social{
     .header .logo, .header .top-social{
         bottom: 30px;
     }
-    .single .author{
+    .single.content .author{
         float: none;
         margin: 20px auto;
     }
-    .single .article-desc, .single h2{
+    .post .author-avatar {
+        line-height: 1.2em;
+    }
+    .single.content .article-desc, .single.content h2{
         margin: 20px;
+    }
+    .mtphr-dnt-scroll a {
+        font-size: 1.2em;
+    }
+    .grey-block {
+        margin-bottom: -105px;
+    }
+    .nav-tabs > li > a{
+        font-size: 1.2em;
+        padding: 0.4em 1.0em;
+        margin-right: 0;
+    }
+    #qa.tab-pane {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 
@@ -641,7 +805,9 @@ li.post .post-social{
         max-height: 360px;
         margin: 0 auto 40px;
         height: 300px;
+        width: 100%;
     }
+
     .more{
         width: 480px;
     }
@@ -670,7 +836,7 @@ li.post .post-social{
         font-size: 1.2em;
     }
     .author-avatar {
-        font-size: 1.2em;    
+        font-size: 1.2em;
     }
     .post-social a {
         font-size: 1.6em;
@@ -682,6 +848,22 @@ li.post .post-social{
         width: 100%;
         height: 360px;
         z-index: -1 !important;
+    }
+    .nav-tabs, .tab-pane {
+        width: 480px;
+    }
+    #subscribing input[type="email"]{
+        width: 200px;
+    }
+    .tab-pane{
+        margin: 0 auto;
+    }
+    .wpcf7 input, .wpcf7 textarea{
+        min-width: 386px;
+    }
+    .wpcf7 input[type="submit"]{
+        min-width: 400px;
+        margin-left: 20px;
     }
 }
 @media (min-width: 768px) {
@@ -705,18 +887,32 @@ li.post .post-social{
     h2.latest-entries {
         font-size: 2.5em;
     }
-    .single .author{
+    .single.content .author{
         float: left;
-        margin: -190px 20px 20px 0;
+        margin: 0 20px 20px 0;
     }
-    .single .article-desc, .single h2{
+    .single.content .article-desc, .single.content h2{
         margin-left: 260px; 
     }
     .navigation {
         margin: 30px 0;
     }
+    .mtphr-dnt-scroll a {
+        font-size: 1.5em;
+    }
     li.post .post-title {
         padding: 4% 10.5%;
+    }
+    .grey-block {
+        margin-bottom: -108px;
+    }
+    .nav-tabs > li > a {
+        font-size: 1.5em;
+        padding: 0.4em 1.5em;
+        margin-right: 0;
+    }
+    #qa.tab-pane {
+        padding: 0;
     }
 }
 @media (min-width: 1100px) {
@@ -724,8 +920,13 @@ li.post .post-social{
         float: left;
         margin: 0 40px 40px 0;
     }
-    .post:nth-child(odd) {
+    div.post:nth-child(odd) {
         margin: 0 0 40px;
+        float: left;
+    }
+    div.post:nth-child(even) {
+        margin-left: 40px;
+        margin-right: 0;
     }
     .more{
         width: 100%;
@@ -737,4 +938,15 @@ li.post .post-social{
     .header .logo, .header .top-social{
         bottom: 20px;
     }
+
+    .nav-tabs {
+        width: auto;
+    }
+    .nav-tabs > li > a {
+        padding: 0.4em 1.7em;
+    }
+    .tab-pane {
+        width: auto;
+    }
+
 }

@@ -5,10 +5,12 @@
     <meta charset="utf-8" />
     <title><?php wp_title('', true); ?></title>
 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css" />
     <script src="<?php bloginfo('template_directory');?>/js/jquery.min.js"></script>
-
-    <?php if (is_front_page() || is_page_template('thanks.php')) { ?>
+    <script src="<?php bloginfo('template_directory');?>/js/bootstrap.min.js"></script>
+    
+    <?php if (is_front_page() || is_page_template('thanks.php') || is_category()) { ?>
         <?php
             wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', 'jquery', false);
             wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
@@ -60,7 +62,7 @@
     <?php wp_head(); ?>
     
 </head>
-<body>
+<body <?php body_class( $class ); ?>>
 
     <header class="header">
         <a href="/" class="logo">
@@ -114,5 +116,8 @@
             <?php endif; ?>
         <?php wp_reset_query(); ?>
         <div class="clear-fix"></div>
+    <?php } ?>
+    <?php if (is_front_page() || is_category()) { ?>
+        <div class="grey-block"></div>
     <?php } ?>
 <div class="wrapper">
