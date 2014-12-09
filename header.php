@@ -6,7 +6,7 @@
     <title><?php wp_title('', true); ?></title>
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css" type="text/css" />
     <script src="<?php bloginfo('template_directory');?>/js/jquery.min.js"></script>
     <script src="<?php bloginfo('template_directory');?>/js/bootstrap.min.js"></script>
     
