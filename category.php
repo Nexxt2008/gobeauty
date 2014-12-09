@@ -1,13 +1,12 @@
 <?php get_header(); ?>
+
     <main class="category content">
         <div class="ticker">
             <?php  if(function_exists('ditty_news_ticker')){ditty_news_ticker(604);} ?>
         </div>
         <h1><?php single_cat_title( '', true ); ?></h1>
         <div id="new" class="tab-pane fade in active">
-            <?php 
-                if (have_posts()) : while (have_posts()) : the_post();
-            ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="post">
                     <div class="img-wrapper">
                         <?php
@@ -39,7 +38,9 @@
             <?php wp_reset_query(); ?>
         </div>
     </main><!-- .content -->
+
     <div class="clear-fix"></div>
+
     <div id="subscribing">
         <?php dynamic_sidebar('Before footer') ?>
     </div>

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
     <main class="single content">
         <?php if ( have_posts() ) : the_post(); ?>
             <div class="author">
@@ -23,4 +24,5 @@
         <?php endif; ?>
         <div class="clear-fix"></div>
     </main>
+
 <?php get_footer(); ?>

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
+
     <main class="single content">
+
         <?php if ( have_posts() ) : the_post(); ?>
             <div class="author">
                 <h4>Author</h4>
@@ -21,6 +23,7 @@
             </div>
             <?php the_content(); ?>
         <?php endif; ?>
+
         <div class="clear-fix"></div>
 
         <div class="navigation">
@@ -34,4 +37,5 @@
         </div> <!-- end navigation -->
 
     </main>
+
 <?php get_footer(); ?>

@@ -18,7 +18,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 register_sidebar(array('name'=>'Before footer'));
 
 /* Define the custom box */
-        
 add_action( 'add_meta_boxes', 'of_add_custom_box_for_post' );
 add_action( 'save_post', 'of_save_postdata_for_post' );
 
@@ -112,8 +111,4 @@ function ff_settings_page() {
     </form>
 </div>
 
-<?php }
-
-
-
-?>
+<?php } ?>
