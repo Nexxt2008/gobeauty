@@ -6,7 +6,7 @@
     <title><?php wp_title('', true); ?></title>
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css?<?php echo intval(microtime(1)); ?>" type="text/css" />
     <?php
         if (!empty($_POST['subscriber_email'])) {
             $headers = 'From: Gobeauty blog <contact@gobeauty.co.za>' . "\r\n";

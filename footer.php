@@ -13,7 +13,7 @@
 
 <?php if (is_front_page() || is_category()) {
         wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', 'jquery', false);
-        wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
+        wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js?'.intval(microtime(1)), 'jquery', false);
     ?>
     <script src="<?php bloginfo('template_directory');?>/js/jcarousellite-1.0.1.min.js"></script>
     <script type="text/javascript">

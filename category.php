@@ -11,7 +11,7 @@
                     <div class="img-wrapper">
                         <?php
                             if ( has_post_thumbnail() ) {
-                                the_post_thumbnail("post-entry");
+                                the_post_thumbnail("poster");
                             } else {
                                 echo "<img src='".get_bloginfo('template_directory')."/images/article-bg.png' class='attachment-post-entry wp-post-image' >";
                             }

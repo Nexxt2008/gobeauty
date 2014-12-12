@@ -12,6 +12,7 @@ if (class_exists('MultiPostThumbnails')) {
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' ); 
     add_image_size( 'post-entry', 9999, 360, true ); 
+    add_image_size( 'poster', 480, 360, true ); 
     add_image_size( 'top-thumbnail', 9999 );
 }
 
